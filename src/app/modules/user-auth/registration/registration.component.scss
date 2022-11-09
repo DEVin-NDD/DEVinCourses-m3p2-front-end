@@ -1,0 +1,109 @@
+@import '/src/styles.scss';
+@import '../../user-auth/user-auth.component.scss';
+
+.title{
+  color: $azul-escuro;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+//Estilo alternativo para os 2 primeiros inputs e os inputs à direita
+.input-container2 {
+  font-family: 'Poppins', sans-serif;
+
+  label {
+    font-size: 20px;
+    font-weight: 700;
+
+    color: $azul-escuro;
+    margin-bottom: 2px; //era 8px
+  }
+
+  input {
+    font-family: inherit;
+    width: 100%;
+
+    font-size: 18px;
+
+    padding: 8px 0 5px 10px;
+
+    border: 2px solid $azul-escuro;
+    border-radius: 5px;
+
+    &::placeholder {
+      font-weight: 800;
+      color: $azul-escuro;
+      opacity: 0.2;
+    }
+  }
+}
+
+//Estilo do botão modal upload foto
+.button-photo {
+  font-family: 'Poppins', sans-serif;
+
+  label {
+    font-size: 18px;
+    font-weight:600;
+
+    color: $branco;
+    margin-bottom: 2px; //era 8px
+  }
+
+  button{
+    background-color: $azul-escuro;
+  }
+
+  input {
+    font-family: inherit;
+    width: 100%;
+
+    font-size: 18px;
+
+    padding: 8px 0 15px 10px;
+
+    border: 2px solid $azul-escuro;
+    border-radius: 5px;
+
+    &::placeholder {
+      font-weight: 800;
+      color: $azul-escuro;
+      opacity: 0.2;
+    }
+  }
+}
+
+//Estilo do botão confirmar
+.button-confirm {
+  font-family: 'Poppins', sans-serif;
+
+  label {
+    font-size: 18px;
+    font-weight:600;
+
+    color: $branco;
+    margin-bottom: 2px; //era 8px
+  }
+
+  input {
+    font-family: inherit;
+    width: 100%;
+
+    font-size: 18px;
+
+    padding: 8px 0 15px 10px;
+
+    border: 2px solid $azul-escuro;
+    border-radius: 5px;
+
+    &::placeholder {
+      font-weight: 800;
+      color: $azul-escuro;
+      opacity: 0.2;
+    }
+  }
+}
+
+
+
+
