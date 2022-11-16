@@ -43,8 +43,8 @@ main {
     width: 100%;
 
     .form-container {
-      width: 508px;
-      height: 662px;
+      max-width: 508px;
+      max-height: 662px;
 
       background-color: #FFF;
 
@@ -85,6 +85,29 @@ main {
   }
 }
 
+.button {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+
+  animation: 1s linear 30ms 1;
+
+  &:hover {
+    animation: 500ms linear 30ms 1;
+    transition: filter 500ms;
+    filter: brightness(90%);
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
 // Posicionamento divs flutuantes
 .container-anchor {
   position: relative;
@@ -97,7 +120,7 @@ main {
   flex-wrap: nowrap;
   justify-content: space-between;
 
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 
   div {
     padding: 8px;

@@ -14,12 +14,12 @@ export class LoginFormComponent {
 
   form = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.pattern(this.regexPassword)]),
+    password: new FormControl('', [Validators.required, Validators.minLength(8), Validators.pattern(this.regexPassword)]),
   });
 
   userEmails = new FormGroup({
     ResetEmail: new FormControl('',[Validators.required,Validators.email])
-    });
+  });
 
   constructor(private authService: AuthenticationService,private route: Router, private userService:  UserService) {}
 
@@ -47,7 +47,7 @@ export class LoginFormComponent {
     if (!this.userEmails.valid) {
       return;
     }
-    
+
     let ResetEmail = this.userEmails.controls['ResetEmail'].value;
 
     this.userService.sendEmail(ResetEmail).subscribe({

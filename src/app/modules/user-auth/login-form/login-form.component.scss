@@ -1,51 +1,30 @@
-@import '../user-auth.component.scss';
+@import "../user-auth.component.scss";
 
 h1 {
   color: $azul-escuro;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 
 .button-send-modal {
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  padding: 6px 12px;
   background-color: $azul-escuro;
-  color: white;
-  border-radius: 5px;
-
 }
 
 .button-cancel-modal {
   width: 120px;
-  font-size: 16px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  padding: 6px 12px;
-  background-color: #BA4040;
-  color: white;
+
+  background-color: $vermelho;
+
   border-radius: 5px;
+}
+
+.button-send {
+  font-size: 20px;
+  border: none;
+  background-color: $azul-escuro;
+
+  &[disabled] {
+    background-color: $azul-escuro;
   }
-
-.button-send[disabled]{
-  font-size: 20px;
-  font-weight: 700;
-  border: 2px solid $azul-escuro;
-  background-color: $azul-escuro;
-  color: white;
 }
-
-.button-send:enabled{
-  font-size: 20px;
-  font-weight: 700;
-  border: 2px solid $azul-escuro;
-  background-color: $azul-escuro;
-  color: white;
-
-}
-
-
-
-

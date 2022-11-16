@@ -10,7 +10,7 @@ import { IUser } from 'src/app/models/user';
 export class UserService {
   constructor(private http: HttpClient) { }
 
-  getUserById(id: string): Observable<IUser> {
+  getUserById(id: number): Observable<IUser> {
     return this.http.get<IUser>(SERVER_ROUTE + id);
   }
 
@@ -23,6 +23,6 @@ export class UserService {
   }
 
   sendEmail(email: string): Observable<string>{
-     return this.http.post<string>(SERVER_ROUTE,email);
+     return this.http.post<string>(SERVER_ROUTE, email);
   }
 }
