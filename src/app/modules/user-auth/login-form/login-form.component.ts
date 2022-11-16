@@ -50,10 +50,14 @@ export class LoginFormComponent {
 
     let ResetEmail = this.userEmails.controls['ResetEmail'].value;
 
-    this.userService.sendEmail(ResetEmail);
-
-    this.userEmails.reset();
-    alert('Token Enviado');
-
+    this.userService.sendEmail(ResetEmail).subscribe({
+      next: ()=>{
+        this.userEmails.reset();
+        alert('Token Enviado');
+        },
+      error:(err) =>{
+        alert(err);
+      }
+    }) 
   }
 }
